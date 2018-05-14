@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Example</title>
+</head>
+<body>
+<input type="text" id="input" title="input"/>
+<button id="send">전송</button>
+<textarea id="window" style="color: chocolate;width: 300px;height: 300px" title="area"></textarea>
+</body>
+
+<script type="text/javascript">
+    (() => {
+        let ws = new WebSocket(`ws://localhost:8080/websocket`);
+
+        ws.onopen = (e) => {
+            console.log(e);
+        };
+
+        ws.onmessage = (message) => {
+            let window = document.getElementById('window');
+            window.textContent = window.textContent + `\nServer Sent Message : ${message.data}`;
+        };
+
+        let btn = document.getElementById('send');
+        btn.addEventListener('click', () => ws.send(document.getElementById('input').value));
+    })();
+</script>
+</html>

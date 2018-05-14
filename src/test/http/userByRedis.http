@@ -1,0 +1,33 @@
+### 등록 redisReactiveTemplate
+POST http://localhost:8080/users/redis
+Content-Type: application/json
+
+{
+    "userNo": 999,
+    "userName": "홍길동",
+    "types": ["payco", "naver", "kakao"]
+}
+
+### 조회 redisReactiveTemplate
+GET http://localhost:8080/users/redis/999
+Content-Type: application/json
+
+### 등록 mongo repository
+POST http://localhost:8080/users/mongo
+Content-Type: application/json
+
+{
+    "userNo": 999,
+    "userName": "홍길동",
+    "types": ["payco", "naver", "kakao"]
+}
+
+### 조회 mongo repository
+GET http://localhost:8080/users/mongo/999
+Content-Type: application/json
+
+### 메세지 전송 redis publish
+GET http://localhost:8080/send/hello!
+Content-Type: application/json
+
+###

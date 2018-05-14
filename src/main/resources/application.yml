@@ -1,0 +1,12 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+server:
+  error:
+    whitelabel:
+      enabled: false

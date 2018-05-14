@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server Sent Event</title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+    (() => {
+        let eventSource = new EventSource(`/stream`);
+
+        eventSource.onopen = (() => {
+            document.write("콘솔 확인하세요.");
+            console.log('open');
+        });
+
+        eventSource.onmessage = ((message) => {
+            console.log(message.data);
+        });
+
+    })();
+</script>
+</html>

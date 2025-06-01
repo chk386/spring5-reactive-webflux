@@ -768,7 +768,6 @@ org.springframework.transaction.interceptor: TRACE
 3. 되도록 코드에서 블록킹 작업이 발생하지 않도록 Flux 스트림, Mono에 데이터를 넣어서 사용하자.
 4. 바로 도입하자
 3년전 jdk8 적용했더니 주니어들 코드 스타일이 먼저 바뀜.
-지금바로 spring reactive 적용하면 쥬니어들이 아마 더 잘할꺼에요.. ㅜㅜ
 5. 더 봐야할 것들
 reactive streams의 API components에 대한 이해
 https://github.com/reactive-streams/reactive-streams-jvm/blob/v1.0.2/README.md
